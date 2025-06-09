@@ -1,16 +1,13 @@
 package com.debuggeandoideas.eats_hub_catalog.collections;
 
-import com.debuggeandoideas.eats_hub_catalog.enums.PriceEnum;
 import com.debuggeandoideas.eats_hub_catalog.enums.ReservationStatusEnum;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.Field;
 
 import java.util.UUID;
 

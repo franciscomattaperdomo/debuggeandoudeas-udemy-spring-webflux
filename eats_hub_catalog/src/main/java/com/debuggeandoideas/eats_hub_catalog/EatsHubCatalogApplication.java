@@ -28,7 +28,7 @@ public class EatsHubCatalogApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 
 
-		System.out.println("=== STARTING RESERVATION INSERT TESTS ===\n");
+		/*System.out.println("=== STARTING RESERVATION INSERT TESTS ===\n");
 
 		final var parrillaModernaID = "0ee619ba-e95f-4103-99f7-ee9cdf831d90";
 		final var cafeNostalgiaID = "be33011c-13dd-45b9-a60e-e9adb8f4e022";
@@ -109,10 +109,6 @@ public class EatsHubCatalogApplication implements CommandLineRunner {
 				.date(date)
 				.time(time)
 				.notes(notes)
-				.build();
+				.build();*/
 	}
-
-
-
-
 }
