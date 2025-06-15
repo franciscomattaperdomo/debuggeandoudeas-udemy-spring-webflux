@@ -72,26 +72,6 @@ public class ReservationValidator {
         };
     }
 
-    public BusinessValidator<ReservationCollection> validateRestaurantIDBeforeUpdate() {
-        log.info("Validating restaurant ID before update");
-
-        return reservation -> {
-            final var restaurantId = UUID.fromString(reservation.getRestaurantId());
-
-            return this.restaurantRepository.findById(restaurantId)
-                    .switchIfEmpty(Mono.error(new BusinessException("Restaurant not found")))
-                    .flatMap(restaurant -> {
-                        if (!restaurant.getId().equals(UUID.fromString(reservation.getRestaurantId()))) {
-                            return Mono.error(new BusinessException("Restaurant ID must be the same as the original restaurant"));
-                        }
-
-                        return Mono.empty();
-                    });
-        };
-    }
-
-
-
     private boolean isRestaurantClosed(RestaurantCollection restaurant, String reservationTime) {
         try {
 

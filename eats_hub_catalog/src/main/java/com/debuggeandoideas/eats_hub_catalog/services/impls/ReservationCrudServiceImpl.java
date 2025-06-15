@@ -6,12 +6,14 @@ import com.debuggeandoideas.eats_hub_catalog.exceptions.ResourceNotFoundExceptio
 import com.debuggeandoideas.eats_hub_catalog.repositories.ReservationRepository;
 import com.debuggeandoideas.eats_hub_catalog.repositories.RestaurantRepository;
 import com.debuggeandoideas.eats_hub_catalog.services.definitions.ReservationCrudService;
+import com.debuggeandoideas.eats_hub_catalog.validators.ReservationValidator;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -22,12 +24,22 @@ public class ReservationCrudServiceImpl implements ReservationCrudService {
 
     private final ReservationRepository reservationRepository;
     private final RestaurantRepository restaurantRepository;
+    private final ReservationValidator reservationValidator;
 
 
     @Override
     public Mono<ReservationCollection> createReservation(ReservationCollection reservation) {
-        return this.restaurantRepository.findById(UUID.fromString(reservation.getRestaurantId()))
-                .switchIfEmpty(Mono.error(new ResourceNotFoundException("Restaurant not found")))
+
+        final var validations = List.of(
+                this.reservationValidator.validateRestaurantNotClosed(),
+                this.reservationValidator.validateAvailability()
+        );
+
+        return this.reservationValidator.applyValidations(reservation, validations)
+                .then(
+                        this.restaurantRepository.findById(UUID.fromString(reservation.getRestaurantId()))
+                                .switchIfEmpty(Mono.error(new ResourceNotFoundException("Restaurant not found")))
+                )
                 .flatMap(restaurant -> {
 
                     if (Objects.isNull(reservation.getStatus())) {
@@ -63,8 +75,21 @@ public class ReservationCrudServiceImpl implements ReservationCrudService {
 
     @Override
     public Mono<ReservationCollection> updateReservation(UUID id, ReservationCollection reservation) {
+
+        final var validations = List.of(
+                this.reservationValidator.validateRestaurantNotClosed()
+        );
+
         return this.reservationRepository.findById(id)
                 .switchIfEmpty(Mono.error(new ResourceNotFoundException("Reservation not found")))
+
+                .flatMap(existingReservation -> {
+
+                    reservation.setRestaurantId(existingReservation.getRestaurantId());
+
+                    return this.reservationValidator.applyValidations(reservation, validations)
+                            .thenReturn(existingReservation);
+                })
 
                 .flatMap(existingReservation -> {
 
