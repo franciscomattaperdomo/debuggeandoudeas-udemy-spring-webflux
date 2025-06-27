@@ -13,7 +13,7 @@ import java.time.Instant;
 @AllArgsConstructor
 public class Review {
 
-    private Object customerId;
+    private String customerId;
     private String customerName;
     private Integer rating;
     private String comment;
