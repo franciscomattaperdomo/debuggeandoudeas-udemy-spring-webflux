@@ -13,6 +13,6 @@ public class ReservationResponse {
 
     private String restaurantId;
     private String customerName;
-    private String dateTime; // example 2025-06-16,15:30
+    private String dateTime;
     private Integer partySize;
 }

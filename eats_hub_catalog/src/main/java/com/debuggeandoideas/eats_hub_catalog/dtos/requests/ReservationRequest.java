@@ -11,11 +11,11 @@ import lombok.NoArgsConstructor;
 @Builder
 public class ReservationRequest {
 
-    private String restaurantId;
-    private String customerId;
-    private String customerName;
-    private String customerEmail;
-    private String dateTime; // example 2025-06-16,15:30
-    private Integer partySize;
+    private String restaurantId;  //Not null is UUID format
+    private String customerId;  //Not null is UUID format
+    private String customerName; //Not null length min 3 max 21
+    private String customerEmail; //Not null mail format
+    private String dateTime; // valid format: example 2025-06-16,15:30
+    private Integer partySize; //not null
     private String comment;
 }
