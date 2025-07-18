@@ -26,9 +26,10 @@ public class ReservationCrudServiceImpl implements ReservationCrudService {
     private final RestaurantRepository restaurantRepository;
     private final ReservationValidator reservationValidator;
 
-
     @Override
     public Mono<ReservationCollection> createReservation(ReservationCollection reservation) {
+
+        reservation.setId(UUID.randomUUID());
 
         final var validations = List.of(
                 this.reservationValidator.validateRestaurantNotClosed(),
