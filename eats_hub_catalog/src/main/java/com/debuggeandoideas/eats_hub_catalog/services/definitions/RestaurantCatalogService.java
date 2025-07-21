@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface RestaurantCatalogService {
 
-    Flux<RestaurantCollection> readAll();
+    Flux<RestaurantCollection> readAll(Integer page, Integer size);
 
     Flux<RestaurantCollection> readByCuisineType(String cuisineType);
 
@@ -18,5 +18,4 @@ public interface RestaurantCatalogService {
     Flux<RestaurantCollection> readByPriceRangeIn(List<PriceEnum> priceRanges);
 
     Flux<RestaurantCollection> readByCity(String city);
-
 }

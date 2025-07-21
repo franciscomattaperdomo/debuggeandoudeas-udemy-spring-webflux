@@ -1,6 +1,5 @@
 package com.debuggeandoideas.eats_hub_catalog.services.definitions;
 
-import com.debuggeandoideas.eats_hub_catalog.collections.RestaurantCollection;
 import com.debuggeandoideas.eats_hub_catalog.dtos.responses.RestaurantResponse;
 import com.debuggeandoideas.eats_hub_catalog.enums.PriceEnum;
 import reactor.core.publisher.Flux;
@@ -10,7 +9,7 @@ import java.util.List;
 
 public interface RestaurantBusinessService {
 
-    Flux<RestaurantResponse> readAll();
+    Flux<RestaurantResponse> readAll(Integer page, Integer size);
 
     Flux<RestaurantResponse> readByCuisineType(String cuisineType);
 
