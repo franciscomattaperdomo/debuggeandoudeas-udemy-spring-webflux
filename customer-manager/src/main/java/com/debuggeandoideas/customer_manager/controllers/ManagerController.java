@@ -7,7 +7,6 @@ import com.debuggeandoideas.customer_manager.tables.RoleTable;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
 
@@ -23,6 +22,25 @@ import java.util.Set;
 public class ManagerController {
 
     private final CustomerService customerService;
+
+    @PostMapping
+    public Mono<ResponseEntity<CustomerTable>> createCustomer(@RequestBody CustomerTable customer, @RequestParam Set<String> roles) {
+        log.info("POST customers/manager");
+
+
+        return customerService.createCustomer(customer, roles)
+                .map(createdCustomer -> ResponseEntity
+                        .created(URI.create("customers/manager/" + createdCustomer.getId()))
+                        .body(createdCustomer))
+                .onErrorResume(IllegalArgumentException.class, error -> {
+                    log.error("POST customers/manager/ failed", error);
+                    return Mono.just(ResponseEntity.badRequest().build());
+                })
+                .onErrorResume(RuntimeException.class, error -> {
+                    log.error("POST customers/manager/ failed", error);
+                    return Mono.just(ResponseEntity.internalServerError().build());
+                });
+    }
 
     @GetMapping("/roles/{email}")
     public Mono<ResponseEntity<Map<String, List<RoleTable>>>> getRolesByEmail(@PathVariable String email) {
