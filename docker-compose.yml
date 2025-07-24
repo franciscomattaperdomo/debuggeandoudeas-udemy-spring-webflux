@@ -12,3 +12,50 @@ services:
       - "27017:27017"
     volumes:
       - ./db/mongo/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+    networks:
+      - eats-network
+
+  redis:
+    image: redis:7.4.1-alpine
+    restart: always
+    container_name: eats-redis
+    ports:
+      - "6379:6379"
+    command: redis-server --requirepass debuggeandoideas
+    networks:
+      - eats-network
+
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    restart: always
+    container_name: eats-redis-ui
+    environment:
+      - REDIS_HOSTS=local:redis:6379:0:debuggeandoideas
+      - HTTP_USER=admin
+      - HTTP_PASSWORD=debuggeandoideas
+    ports:
+      - "8081:8081"
+    depends_on:
+      - redis
+    networks:
+      - eats-network
+
+
+  postgres:
+    image: postgres:17.5
+    container_name: customers-db
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: debuggeandoideas
+      POSTGRES_DB: customers
+    volumes:
+      - ./db/sql:/docker-entrypoint-initdb.d:ro
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    networks:
+      - eats-network
+
+networks:
+  eats-network:
+    driver: bridge
