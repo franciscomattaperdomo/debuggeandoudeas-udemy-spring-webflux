@@ -94,5 +94,4 @@ public class RestaurantCatalogHandler {
                 .body(fluxRestaurants, RestaurantResponse.class)
                 .switchIfEmpty(ServerResponse.noContent().build());
     }
-
 }
