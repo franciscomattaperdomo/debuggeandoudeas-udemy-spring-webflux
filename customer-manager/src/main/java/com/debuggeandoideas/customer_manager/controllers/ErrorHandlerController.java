@@ -18,7 +18,7 @@ public class ErrorHandlerController {
 
         final Map<String, Object> errors = new HashMap<>();
 
-        errors.put("ststus", HttpStatus.BAD_REQUEST.value());
+        errors.put("status", HttpStatus.BAD_REQUEST.value());
         errors.put("message", "Validation failed");
 
         final Map<String, String> fieldErrors = new HashMap<>();

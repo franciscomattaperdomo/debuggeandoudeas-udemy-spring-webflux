@@ -4,12 +4,14 @@ package com.debuggeandoideas.eats_hub_catalog.dtos.responses;
 import com.debuggeandoideas.eats_hub_catalog.enums.PriceEnum;
 import com.debuggeandoideas.eats_hub_catalog.records.Address;
 import com.debuggeandoideas.eats_hub_catalog.records.ContactInfo;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
 
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
+@Schema(description = "Response for Catalog")
 public class RestaurantResponse {
 
     private String name;
