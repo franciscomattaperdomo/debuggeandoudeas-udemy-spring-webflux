@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="81a47920-50f1-4715-8c99-202b3077030e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/db/mongo/init-mongo.js" beforeDir="false" afterPath="$PROJECT_DIR$/db/mongo/init-mongo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/mongo/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/db/mongo/test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eats_hub_catalog/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/eats_hub_catalog/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eats_hub_catalog/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/eats_hub_catalog/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eats_hub_catalog/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/eats_hub_catalog/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eats_hub_catalog/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/eats_hub_catalog/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eats_hub_catalog/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/eats_hub_catalog/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eats_hub_catalog/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/eats_hub_catalog/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eats_hub_catalog/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/eats_hub_catalog/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eats_hub_catalog/src/main/java/com/debuggeandoideas/eats_hub_catalog/EatsHubCatalogApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/eats_hub_catalog/src/main/java/com/debuggeandoideas/eats_hub_catalog/EatsHubCatalogApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eats_hub_catalog/src/main/java/com/debuggeandoideas/eats_hub_catalog/collections/ReservationCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/eats_hub_catalog/src/main/java/com/debuggeandoideas/eats_hub_catalog/collections/ReservationCollection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eats_hub_catalog/src/main/java/com/debuggeandoideas/eats_hub_catalog/collections/RestaurantCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/eats_hub_catalog/src/main/java/com/debuggeandoideas/eats_hub_catalog/collections/RestaurantCollection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eats_hub_catalog/src/main/java/com/debuggeandoideas/eats_hub_catalog/configs/MongoConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/eats_hub_catalog/src/main/java/com/debuggeandoideas/eats_hub_catalog/configs/MongoConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eats_hub_catalog/src/main/java/com/debuggeandoideas/eats_hub_catalog/dtos/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/eats_hub_catalog/src/main/java/com/debuggeandoideas/eats_hub_catalog/dtos/Review.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eats_hub_catalog/src/main/java/com/debuggeandoideas/eats_hub_catalog/enums/PriceEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/eats_hub_catalog/src/main/java/com/debuggeandoideas/eats_hub_catalog/enums/PriceEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eats_hub_catalog/src/main/java/com/debuggeandoideas/eats_hub_catalog/enums/ReservationStatusEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/eats_hub_catalog/src/main/java/com/debuggeandoideas/eats_hub_catalog/enums/ReservationStatusEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eats_hub_catalog/src/main/java/com/debuggeandoideas/eats_hub_catalog/exceptions/ResourceNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/eats_hub_catalog/src/main/java/com/debuggeandoideas/eats_hub_catalog/exceptions/ResourceNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eats_hub_catalog/src/main/java/com/debuggeandoideas/eats_hub_catalog/records/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/eats_hub_catalog/src/main/java/com/debuggeandoideas/eats_hub_catalog/records/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eats_hub_catalog/src/main/java/com/debuggeandoideas/eats_hub_catalog/records/ContactInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/eats_hub_catalog/src/main/java/com/debuggeandoideas/eats_hub_catalog/records/ContactInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eats_hub_catalog/src/main/java/com/debuggeandoideas/eats_hub_catalog/repositories/ReservationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/eats_hub_catalog/src/main/java/com/debuggeandoideas/eats_hub_catalog/repositories/ReservationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eats_hub_catalog/src/main/java/com/debuggeandoideas/eats_hub_catalog/repositories/RestaurantRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/eats_hub_catalog/src/main/java/com/debuggeandoideas/eats_hub_catalog/repositories/RestaurantRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eats_hub_catalog/src/main/java/com/debuggeandoideas/eats_hub_catalog/services/definitions/ReservationCrudService.java" beforeDir="false" afterPath="$PROJECT_DIR$/eats_hub_catalog/src/main/java/com/debuggeandoideas/eats_hub_catalog/services/definitions/ReservationCrudService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eats_hub_catalog/src/main/java/com/debuggeandoideas/eats_hub_catalog/services/definitions/RestaurantCatalogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/eats_hub_catalog/src/main/java/com/debuggeandoideas/eats_hub_catalog/services/definitions/RestaurantCatalogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eats_hub_catalog/src/main/java/com/debuggeandoideas/eats_hub_catalog/services/impls/ReservationCrudServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/eats_hub_catalog/src/main/java/com/debuggeandoideas/eats_hub_catalog/services/impls/ReservationCrudServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eats_hub_catalog/src/main/java/com/debuggeandoideas/eats_hub_catalog/services/impls/RestaurantCatalogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/eats_hub_catalog/src/main/java/com/debuggeandoideas/eats_hub_catalog/services/impls/RestaurantCatalogServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eats_hub_catalog/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/eats_hub_catalog/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eats_hub_catalog/src/main/resources/mongo-connection.properties" beforeDir="false" afterPath="$PROJECT_DIR$/eats_hub_catalog/src/main/resources/mongo-connection.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eats_hub_catalog/src/test/java/com/debuggeandoideas/eats_hub_catalog/EatsHubCatalogApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/eats_hub_catalog/src/test/java/com/debuggeandoideas/eats_hub_catalog/EatsHubCatalogApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/eats_hub_catalog">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="3ARqYgJMr7yw97iqm1JU2p9yoHP" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build eats_hub_catalog.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.EatsHubCatalogApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="EatsHubCatalogApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="eats_hub_catalog.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.debuggeandoideas.eats_hub_catalog.EatsHubCatalogApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="81a47920-50f1-4715-8c99-202b3077030e" name="Changes" comment="" />
+      <created>1772565781952</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1772565781952</updated>
+      <workItem from="1772565782760" duration="8616000" />
+      <workItem from="1772632283746" duration="1010000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
